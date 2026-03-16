@@ -19,44 +19,50 @@ namespace QLDuocPham_WinForms
         }
         private void btnSanPham_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmSanPham f = new frmSanPham();
             f.ShowDialog();
-
+            this.Show();
             LoadDashboard(); 
         }
         private void btnLoai_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmLoaiSanPham f = new frmLoaiSanPham();
             f.ShowDialog();
-
+            this.Show();
             LoadDashboard();
         }
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmDanhMuc f = new frmDanhMuc();
             f.ShowDialog();
-
+            this.Show();
             LoadDashboard();
         }
         private void btnNCC_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmNhaCungCap f = new frmNhaCungCap();
             f.ShowDialog();
-
+            this.Show();
             LoadDashboard();
         }
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmKhachHang f = new frmKhachHang();
             f.ShowDialog();
-
+            this.Show();
             LoadDashboard();
         }
         private void btnDonHang_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmDonHang f = new frmDonHang();
             f.ShowDialog();
-
+            this.Show();
             LoadDashboard();
         }
         private void btnThoat_Click(object sender, EventArgs e)
