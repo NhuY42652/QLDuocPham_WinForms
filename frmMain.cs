@@ -66,24 +66,36 @@ namespace QLDuocPham_WinForms
 
         void LoadDashboard()
         {
-            SqlConnection conn = Database.GetConnection();
-            conn.Open();
+            try
+            {
+                using (SqlConnection conn = Database.GetConnection())
+                {
+                    conn.Open();
 
-            lblTongSP.Text = new SqlCommand("SELECT COUNT(*) FROM SanPham", conn).ExecuteScalar().ToString();
+                    lblTongSP.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM SanPham", conn).ExecuteScalar());
+                    lblTongNCC.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM NhaCungCap", conn).ExecuteScalar());
+                    lblTongLoai.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM LoaiSanPham", conn).ExecuteScalar());
+                    lblTongDanhMuc.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM DanhMuc", conn).ExecuteScalar());
+                    lblTongKH.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM KhachHang", conn).ExecuteScalar());
+                    lblTongDonHang.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM DonHang", conn).ExecuteScalar());
+                    lblTonKho.Text = Convert.ToString(new SqlCommand("SELECT ISNULL(SUM(SLTon),0) FROM SanPham", conn).ExecuteScalar());
+                }
+            }
+            catch (SqlException)
+            {
+                lblTongSP.Text = "0";
+                lblTongNCC.Text = "0";
+                lblTongLoai.Text = "0";
+                lblTongDanhMuc.Text = "0";
+                lblTongKH.Text = "0";
+                lblTongDonHang.Text = "0";
+                lblTonKho.Text = "0";
 
-            lblTongNCC.Text = new SqlCommand("SELECT COUNT(*) FROM NhaCungCap", conn).ExecuteScalar().ToString();
-
-            lblTongLoai.Text = new SqlCommand("SELECT COUNT(*) FROM LoaiSanPham", conn).ExecuteScalar().ToString();
-
-            lblTongDanhMuc.Text = new SqlCommand("SELECT COUNT(*) FROM DanhMuc", conn).ExecuteScalar().ToString();
-
-            lblTongKH.Text = new SqlCommand("SELECT COUNT(*) FROM KhachHang", conn).ExecuteScalar().ToString();
-
-            lblTongDonHang.Text = new SqlCommand("SELECT COUNT(*) FROM DonHang", conn).ExecuteScalar().ToString();
-
-            lblTonKho.Text = new SqlCommand("SELECT ISNULL(SUM(SLTon),0) FROM SanPham", conn).ExecuteScalar().ToString();
-
-            conn.Close();
+                MessageBox.Show("Không thể tải dữ liệu tổng quan. Vui lòng kiểm tra kết nối cơ sở dữ liệu.",
+                                "Lỗi kết nối",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }        
         }
         private void frmMain_Load(object sender, EventArgs e)
         {

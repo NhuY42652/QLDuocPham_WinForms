@@ -429,7 +429,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý sản phẩm";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
