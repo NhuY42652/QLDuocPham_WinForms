@@ -150,7 +150,7 @@
             this.picAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picAnh.Location = new System.Drawing.Point(820, 140);
             this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(120, 80);
+            this.picAnh.Size = new System.Drawing.Size(100, 100);
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAnh.TabIndex = 25;
             this.picAnh.TabStop = false;

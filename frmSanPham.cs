@@ -13,6 +13,8 @@ namespace QLDuocPham_WinForms
     public partial class frmSanPham : Form
     {
         private string duongDanAnh = string.Empty;
+        private byte[] duLieuAnh = null;
+        private bool cotAnhLaNhiPhan = false;
         public frmSanPham()
         {
             InitializeComponent();
@@ -164,6 +166,78 @@ namespace QLDuocPham_WinForms
             return false;
         }
 
+        private bool ThuTaiAnhTuMangByte(byte[] duLieu, bool hienThiThongBao)
+        {
+            ClearAnhHienTai();
+
+            if (duLieu == null || duLieu.Length == 0)
+            {
+                return false;
+            }
+
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(duLieu))
+                using (Image img = Image.FromStream(ms))
+                {
+                    picAnh.Image = new Bitmap(img);
+                }
+
+                return true;
+            }
+            catch (Exception ex) when (ex is OutOfMemoryException || ex is ArgumentException)
+            {
+                if (hienThiThongBao)
+                {
+                    MessageBox.Show("Dữ liệu ảnh trong CSDL không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                return false;
+            }
+        }
+
+        private bool CotAnhDangNhiPhan()
+        {
+            SqlConnection conn = Database.GetConnection();
+
+            string sql = @"SELECT DATA_TYPE
+                           FROM INFORMATION_SCHEMA.COLUMNS
+                           WHERE TABLE_NAME = 'SanPham' AND COLUMN_NAME = 'Anh'";
+
+            object dataType = null;
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                conn.Open();
+                dataType = cmd.ExecuteScalar();
+            }
+
+            string kieuDuLieu = Convert.ToString(dataType);
+            return string.Equals(kieuDuLieu, "image", StringComparison.OrdinalIgnoreCase)
+                   || string.Equals(kieuDuLieu, "varbinary", StringComparison.OrdinalIgnoreCase)
+                   || string.Equals(kieuDuLieu, "binary", StringComparison.OrdinalIgnoreCase);
+        }
+
+        private object LayGiaTriAnhDeLuu()
+        {
+            if (cotAnhLaNhiPhan)
+            {
+                if (duLieuAnh != null && duLieuAnh.Length > 0)
+                {
+                    return duLieuAnh;
+                }
+
+                if (!string.IsNullOrWhiteSpace(duongDanAnh) && File.Exists(duongDanAnh))
+                {
+                    return File.ReadAllBytes(duongDanAnh);
+                }
+
+                return DBNull.Value;
+            }
+
+            return string.IsNullOrWhiteSpace(duongDanAnh) ? (object)DBNull.Value : duongDanAnh;
+        }
+
         void LoadSanPham()
         {
             SqlConnection conn = Database.GetConnection();
@@ -211,7 +285,8 @@ namespace QLDuocPham_WinForms
 
         private void frmSanPham_Load(object sender, EventArgs e)
         {
-           
+            cotAnhLaNhiPhan = CotAnhDangNhiPhan();
+
             LoadSanPham();
             LoadLoaiSP();
             LoadNCC();
@@ -239,11 +314,33 @@ namespace QLDuocPham_WinForms
                 cbNCC.SelectedValue = row.Cells["MaNCC"].Value;
 
                 object giaTriAnh = row.Cells["Anh"].Value;
-                duongDanAnh = giaTriAnh == DBNull.Value ? string.Empty : Convert.ToString(giaTriAnh);
 
-                if (!ThuTaiAnh(duongDanAnh, false))
+                duongDanAnh = string.Empty;
+                duLieuAnh = null;
+
+                if (giaTriAnh == DBNull.Value || giaTriAnh == null)
                 {
-                    duongDanAnh = string.Empty;
+                    ClearAnhHienTai();
+                    return;
+                }
+
+                if (giaTriAnh is byte[])
+                {
+                    duLieuAnh = (byte[])giaTriAnh;
+
+                    if (!ThuTaiAnhTuMangByte(duLieuAnh, false))
+                    {
+                        duLieuAnh = null;
+                    }
+                }
+                else
+                {
+                    duongDanAnh = Convert.ToString(giaTriAnh);
+
+                    if (!ThuTaiAnh(duongDanAnh, false))
+                    {
+                        duongDanAnh = string.Empty;
+                    }
                 }
             }
         }
@@ -266,7 +363,7 @@ namespace QLDuocPham_WinForms
             cmd.Parameters.AddWithValue("@CongDung", txtCongDung.Text);
             cmd.Parameters.AddWithValue("@HDSD", txtHDSD.Text);
             cmd.Parameters.AddWithValue("@Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("@Anh", string.IsNullOrWhiteSpace(duongDanAnh) ? (object)DBNull.Value : duongDanAnh);
+            cmd.Parameters.AddWithValue("@Anh", LayGiaTriAnhDeLuu());
             cmd.Parameters.AddWithValue("@SLTon", txtSLTon.Text);
             cmd.Parameters.AddWithValue("@MaLSP", cbLoaiSP.SelectedValue);
             cmd.Parameters.AddWithValue("@MaNCC", cbNCC.SelectedValue);
@@ -308,7 +405,7 @@ namespace QLDuocPham_WinForms
             cmd.Parameters.AddWithValue("@CongDung", txtCongDung.Text);
             cmd.Parameters.AddWithValue("@HDSD", txtHDSD.Text);
             cmd.Parameters.AddWithValue("@Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("@Anh", string.IsNullOrWhiteSpace(duongDanAnh) ? (object)DBNull.Value : duongDanAnh);
+            cmd.Parameters.AddWithValue("@Anh", LayGiaTriAnhDeLuu());
             cmd.Parameters.AddWithValue("@SLTon", txtSLTon.Text);
             cmd.Parameters.AddWithValue("@MaLSP", cbLoaiSP.SelectedValue);
             cmd.Parameters.AddWithValue("@MaNCC", cbNCC.SelectedValue);
@@ -356,10 +453,40 @@ namespace QLDuocPham_WinForms
 
             picAnh.Image = null;
             duongDanAnh = string.Empty;
+            duLieuAnh = null;
             ClearAnhHienTai();
 
             cbLoaiSP.SelectedIndex = 0;
             cbNCC.SelectedIndex = 0;
+        }
+
+
+        private string LuuAnhTheoDuongDanUngDung(string duongDanNguon)
+        {
+            if (string.IsNullOrWhiteSpace(duongDanNguon) || !File.Exists(duongDanNguon))
+            {
+                return string.Empty;
+            }
+
+            try
+            {
+                string thuMucDich = Path.Combine(Application.StartupPath, "Images");
+                Directory.CreateDirectory(thuMucDich);
+
+                string tenFile = Path.GetFileName(duongDanNguon);
+                string duongDanDich = Path.Combine(thuMucDich, tenFile);
+
+                File.Copy(duongDanNguon, duongDanDich, true);
+                return tenFile;
+            }
+            catch (IOException)
+            {
+                return string.Empty;
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return string.Empty;
+            }
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
@@ -373,10 +500,28 @@ namespace QLDuocPham_WinForms
                 if (ThuTaiAnh(ofd.FileName, true))
                 {
                     duongDanAnh = ofd.FileName;
+                    duLieuAnh = File.ReadAllBytes(ofd.FileName);
+
+                    if (cotAnhLaNhiPhan)
+                    {
+                        duongDanAnh = Path.GetFileName(ofd.FileName);
+                    }
+                    else
+                    {
+                        duongDanAnh = LuuAnhTheoDuongDanUngDung(ofd.FileName);
+
+                        if (string.IsNullOrWhiteSpace(duongDanAnh))
+                        {
+                            duLieuAnh = null;
+                            ClearAnhHienTai();
+                            MessageBox.Show("Không thể sao chép ảnh vào thư mục Images. Vui lòng kiểm tra quyền ghi của ứng dụng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
                 }
                 else
                 {
                     duongDanAnh = string.Empty;
+                    duLieuAnh = null;
                 }
             }
         }
