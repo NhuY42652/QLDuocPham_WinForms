@@ -16,3 +16,6 @@ D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.csproj.
 D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.exe
 D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.pdb
 D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.exe.config
+D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmXuatNhapKhoChiNhanh.resources
+D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.Program.resources
+D:\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmThongKeDoanhThu.resources
