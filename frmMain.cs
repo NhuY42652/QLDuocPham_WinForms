@@ -92,7 +92,6 @@ namespace QLDuocPham_WinForms
                     lblTongDanhMuc.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM DanhMuc", conn).ExecuteScalar());
                     lblTongKH.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM KhachHang", conn).ExecuteScalar());
                     lblTongDonHang.Text = Convert.ToString(new SqlCommand("SELECT COUNT(*) FROM DonHang", conn).ExecuteScalar());
-                    lblTonKho.Text = Convert.ToString(new SqlCommand("SELECT ISNULL(SUM(SLTon),0) FROM SanPham", conn).ExecuteScalar());
                 }
             }
             catch (SqlException)
@@ -103,7 +102,6 @@ namespace QLDuocPham_WinForms
                 lblTongDanhMuc.Text = "0";
                 lblTongKH.Text = "0";
                 lblTongDonHang.Text = "0";
-                lblTonKho.Text = "0";
 
                 MessageBox.Show("Không thể tải dữ liệu tổng quan. Vui lòng kiểm tra kết nối cơ sở dữ liệu.",
                                 "Lỗi kết nối",

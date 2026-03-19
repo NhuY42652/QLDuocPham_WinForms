@@ -115,5 +115,7 @@ namespace QLDuocPham_WinForms
             txtDiaChi.Clear();
             txtDienThoai.Clear();
         }
+
+        
     }
 }

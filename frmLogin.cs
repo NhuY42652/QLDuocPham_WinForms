@@ -74,6 +74,11 @@ namespace QLDuocPham_WinForms
                                 MessageBoxIcon.Error);
             }
         }
+
+        private void lblSubtitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -46,10 +46,6 @@
             this.panelDonHang = new System.Windows.Forms.Panel();
             this.lblDonHangTitle = new System.Windows.Forms.Label();
             this.lblTongDonHang = new System.Windows.Forms.Label();
-            this.panelTon = new System.Windows.Forms.Panel();
-            this.lblTonTitle = new System.Windows.Forms.Label();
-            this.lblTonKho = new System.Windows.Forms.Label();
-            
             this.panelMenu.SuspendLayout();
             this.panelDashboard.SuspendLayout();
             this.panelSP.SuspendLayout();
@@ -58,7 +54,6 @@
             this.panelDanhMuc.SuspendLayout();
             this.panelKhachHang.SuspendLayout();
             this.panelDonHang.SuspendLayout();
-            this.panelTon.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -78,26 +73,26 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 592);
+            this.panelMenu.Size = new System.Drawing.Size(220, 511);
             this.panelMenu.TabIndex = 1;
             // 
             // lblSystem
             // 
             this.lblSystem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblSystem.ForeColor = System.Drawing.Color.White;
-            this.lblSystem.Location = new System.Drawing.Point(14, 16);
+            this.lblSystem.Location = new System.Drawing.Point(27, 9);
             this.lblSystem.Name = "lblSystem";
-            this.lblSystem.Size = new System.Drawing.Size(192, 44);
+            this.lblSystem.Size = new System.Drawing.Size(170, 47);
             this.lblSystem.TabIndex = 0;
-            this.lblSystem.Text = "QL Dược Phẩm";
-            this.lblSystem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSystem.Text = "Quản Lý Dược Phẩm";
+            this.lblSystem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMenuSep
             // 
             this.lblMenuSep.AutoSize = true;
-            this.lblMenuSep.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold);
+            this.lblMenuSep.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenuSep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(140)))), ((int)(((byte)(180)))));
-            this.lblMenuSep.Location = new System.Drawing.Point(16, 70);
+            this.lblMenuSep.Location = new System.Drawing.Point(76, 64);
             this.lblMenuSep.Name = "lblMenuSep";
             this.lblMenuSep.Size = new System.Drawing.Size(64, 17);
             this.lblMenuSep.TabIndex = 1;
@@ -110,7 +105,7 @@
             this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnSanPham.Location = new System.Drawing.Point(0, 92);
+            this.btnSanPham.Location = new System.Drawing.Point(0, 205);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnSanPham.Size = new System.Drawing.Size(220, 42);
@@ -127,7 +122,7 @@
             this.btnNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNCC.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnNCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnNCC.Location = new System.Drawing.Point(0, 136);
+            this.btnNCC.Location = new System.Drawing.Point(0, 85);
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnNCC.Size = new System.Drawing.Size(220, 42);
@@ -144,7 +139,7 @@
             this.btnLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoai.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnLoai.Location = new System.Drawing.Point(0, 180);
+            this.btnLoai.Location = new System.Drawing.Point(0, 165);
             this.btnLoai.Name = "btnLoai";
             this.btnLoai.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnLoai.Size = new System.Drawing.Size(220, 42);
@@ -161,7 +156,7 @@
             this.btnDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDanhMuc.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnDanhMuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnDanhMuc.Location = new System.Drawing.Point(0, 224);
+            this.btnDanhMuc.Location = new System.Drawing.Point(0, 125);
             this.btnDanhMuc.Name = "btnDanhMuc";
             this.btnDanhMuc.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnDanhMuc.Size = new System.Drawing.Size(220, 42);
@@ -178,7 +173,7 @@
             this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 268);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 245);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnKhachHang.Size = new System.Drawing.Size(220, 42);
@@ -195,7 +190,7 @@
             this.btnDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnDonHang.Location = new System.Drawing.Point(0, 312);
+            this.btnDonHang.Location = new System.Drawing.Point(0, 285);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnDonHang.Size = new System.Drawing.Size(220, 42);
@@ -212,27 +207,28 @@
             this.btnXuatNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuatNhapKho.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnXuatNhapKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnXuatNhapKho.Location = new System.Drawing.Point(0, 356);
+            this.btnXuatNhapKho.Location = new System.Drawing.Point(0, 325);
             this.btnXuatNhapKho.Name = "btnXuatNhapKho";
             this.btnXuatNhapKho.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnXuatNhapKho.Size = new System.Drawing.Size(220, 42);
             this.btnXuatNhapKho.TabIndex = 8;
-            this.btnXuatNhapKho.Text = "Xuất nhập kho CN";
+            this.btnXuatNhapKho.Text = "Xuất nhập kho chi nhánh";
             this.btnXuatNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXuatNhapKho.UseVisualStyleBackColor = false;
             this.btnXuatNhapKho.Click += new System.EventHandler(this.btnXuatNhapKho_Click);
-            //
+            // 
             // btnThongKeDoanhThu
-            //
-            this.btnThongKeDoanhThu.BackColor = System.Drawing.Color.FromArgb(26, 58, 92);
+            // 
+            this.btnThongKeDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
             this.btnThongKeDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnThongKeDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKeDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnThongKeDoanhThu.ForeColor = System.Drawing.Color.FromArgb(180, 200, 220);
-            this.btnThongKeDoanhThu.Location = new System.Drawing.Point(0, 400);
+            this.btnThongKeDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
+            this.btnThongKeDoanhThu.Location = new System.Drawing.Point(0, 365);
             this.btnThongKeDoanhThu.Name = "btnThongKeDoanhThu";
             this.btnThongKeDoanhThu.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnThongKeDoanhThu.Size = new System.Drawing.Size(220, 42);
+            this.btnThongKeDoanhThu.TabIndex = 9;
             this.btnThongKeDoanhThu.Text = "Thống kê doanh thu";
             this.btnThongKeDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKeDoanhThu.UseVisualStyleBackColor = false;
@@ -245,7 +241,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnThoat.Location = new System.Drawing.Point(0, 517);
+            this.btnThoat.Location = new System.Drawing.Point(0, 450);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnThoat.Size = new System.Drawing.Size(220, 42);
@@ -266,11 +262,10 @@
             this.panelDashboard.Controls.Add(this.panelDanhMuc);
             this.panelDashboard.Controls.Add(this.panelKhachHang);
             this.panelDashboard.Controls.Add(this.panelDonHang);
-            this.panelDashboard.Controls.Add(this.panelTon);
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(220, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(734, 592);
+            this.panelDashboard.Size = new System.Drawing.Size(564, 511);
             this.panelDashboard.TabIndex = 0;
             this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
             // 
@@ -279,20 +274,20 @@
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
-            this.lblDashboard.Location = new System.Drawing.Point(28, 26);
+            this.lblDashboard.Location = new System.Drawing.Point(212, 19);
             this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(193, 46);
+            this.lblDashboard.Size = new System.Drawing.Size(157, 37);
             this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "Dashboard";
+            this.lblDashboard.Text = "Tổng Quan";
             // 
             // lblDashSub
             // 
             this.lblDashSub.AutoSize = true;
             this.lblDashSub.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblDashSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(130)))), ((int)(((byte)(145)))));
-            this.lblDashSub.Location = new System.Drawing.Point(30, 62);
+            this.lblDashSub.Location = new System.Drawing.Point(179, 66);
             this.lblDashSub.Name = "lblDashSub";
-            this.lblDashSub.Size = new System.Drawing.Size(275, 20);
+            this.lblDashSub.Size = new System.Drawing.Size(222, 15);
             this.lblDashSub.TabIndex = 1;
             this.lblDashSub.Text = "Tổng quan hệ thống quản lý dược phẩm";
             // 
@@ -301,7 +296,7 @@
             this.panelSP.BackColor = System.Drawing.Color.White;
             this.panelSP.Controls.Add(this.lblSPTitle);
             this.panelSP.Controls.Add(this.lblTongSP);
-            this.panelSP.Location = new System.Drawing.Point(23, 218);
+            this.panelSP.Location = new System.Drawing.Point(306, 238);
             this.panelSP.Name = "panelSP";
             this.panelSP.Size = new System.Drawing.Size(210, 110);
             this.panelSP.TabIndex = 2;
@@ -331,7 +326,7 @@
             this.panelNCC.BackColor = System.Drawing.Color.White;
             this.panelNCC.Controls.Add(this.lblNCCTitle);
             this.panelNCC.Controls.Add(this.lblTongNCC);
-            this.panelNCC.Location = new System.Drawing.Point(476, 92);
+            this.panelNCC.Location = new System.Drawing.Point(62, 112);
             this.panelNCC.Name = "panelNCC";
             this.panelNCC.Size = new System.Drawing.Size(210, 110);
             this.panelNCC.TabIndex = 3;
@@ -361,7 +356,7 @@
             this.panelLoai.BackColor = System.Drawing.Color.White;
             this.panelLoai.Controls.Add(this.lblLoaiTitle);
             this.panelLoai.Controls.Add(this.lblTongLoai);
-            this.panelLoai.Location = new System.Drawing.Point(23, 92);
+            this.panelLoai.Location = new System.Drawing.Point(63, 238);
             this.panelLoai.Name = "panelLoai";
             this.panelLoai.Size = new System.Drawing.Size(210, 110);
             this.panelLoai.TabIndex = 4;
@@ -391,7 +386,7 @@
             this.panelDanhMuc.BackColor = System.Drawing.Color.White;
             this.panelDanhMuc.Controls.Add(this.lblDanhMucTitle);
             this.panelDanhMuc.Controls.Add(this.lblTongDanhMuc);
-            this.panelDanhMuc.Location = new System.Drawing.Point(248, 92);
+            this.panelDanhMuc.Location = new System.Drawing.Point(306, 112);
             this.panelDanhMuc.Name = "panelDanhMuc";
             this.panelDanhMuc.Size = new System.Drawing.Size(210, 110);
             this.panelDanhMuc.TabIndex = 5;
@@ -421,7 +416,7 @@
             this.panelKhachHang.BackColor = System.Drawing.Color.White;
             this.panelKhachHang.Controls.Add(this.lblKhachHangTitle);
             this.panelKhachHang.Controls.Add(this.lblTongKH);
-            this.panelKhachHang.Location = new System.Drawing.Point(23, 346);
+            this.panelKhachHang.Location = new System.Drawing.Point(62, 370);
             this.panelKhachHang.Name = "panelKhachHang";
             this.panelKhachHang.Size = new System.Drawing.Size(210, 110);
             this.panelKhachHang.TabIndex = 6;
@@ -451,7 +446,7 @@
             this.panelDonHang.BackColor = System.Drawing.Color.White;
             this.panelDonHang.Controls.Add(this.lblDonHangTitle);
             this.panelDonHang.Controls.Add(this.lblTongDonHang);
-            this.panelDonHang.Location = new System.Drawing.Point(248, 346);
+            this.panelDonHang.Location = new System.Drawing.Point(309, 370);
             this.panelDonHang.Name = "panelDonHang";
             this.panelDonHang.Size = new System.Drawing.Size(210, 110);
             this.panelDonHang.TabIndex = 7;
@@ -476,42 +471,12 @@
             this.lblTongDonHang.TabIndex = 1;
             this.lblTongDonHang.Text = "0";
             // 
-            // panelTon
-            // 
-            this.panelTon.BackColor = System.Drawing.Color.White;
-            this.panelTon.Controls.Add(this.lblTonTitle);
-            this.panelTon.Controls.Add(this.lblTonKho);
-            this.panelTon.Location = new System.Drawing.Point(248, 218);
-            this.panelTon.Name = "panelTon";
-            this.panelTon.Size = new System.Drawing.Size(210, 110);
-            this.panelTon.TabIndex = 8;
-            // 
-            // lblTonTitle
-            // 
-            this.lblTonTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblTonTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(130)))), ((int)(((byte)(145)))));
-            this.lblTonTitle.Location = new System.Drawing.Point(16, 18);
-            this.lblTonTitle.Name = "lblTonTitle";
-            this.lblTonTitle.Size = new System.Drawing.Size(178, 20);
-            this.lblTonTitle.TabIndex = 0;
-            this.lblTonTitle.Text = "Tồn kho";
-            // 
-            // lblTonKho
-            // 
-            this.lblTonKho.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
-            this.lblTonKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
-            this.lblTonKho.Location = new System.Drawing.Point(14, 42);
-            this.lblTonKho.Name = "lblTonKho";
-            this.lblTonKho.Size = new System.Drawing.Size(178, 54);
-            this.lblTonKho.TabIndex = 1;
-            this.lblTonKho.Text = "0";            
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(954, 592);
+            this.ClientSize = new System.Drawing.Size(784, 511);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -529,7 +494,6 @@
             this.panelDanhMuc.ResumeLayout(false);
             this.panelKhachHang.ResumeLayout(false);
             this.panelDonHang.ResumeLayout(false);
-            this.panelTon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -566,9 +530,6 @@
         private System.Windows.Forms.Panel panelDonHang;
         private System.Windows.Forms.Label lblDonHangTitle;
         private System.Windows.Forms.Label lblTongDonHang;
-        private System.Windows.Forms.Panel panelTon;
-        private System.Windows.Forms.Label lblTonTitle;
-        private System.Windows.Forms.Label lblTonKho;
         private System.Windows.Forms.Button btnXuatNhapKho;
         private System.Windows.Forms.Button btnThongKeDoanhThu;
     }
