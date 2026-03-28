@@ -379,7 +379,7 @@
             this.btnXuatPdf.Name = "btnXuatPdf";
             this.btnXuatPdf.Size = new System.Drawing.Size(110, 34);
             this.btnXuatPdf.TabIndex = 1;
-            this.btnXuatPdf.Text = "📄 Xuất PDF";
+            this.btnXuatPdf.Text = "🖨 In báo cáo";
             this.btnXuatPdf.UseVisualStyleBackColor = false;
             this.btnXuatPdf.Click += new System.EventHandler(this.btnXuatPdf_Click);
             // 

@@ -117,6 +117,8 @@ namespace QLDuocPham_WinForms
             btnSanPham.FlatAppearance.BorderSize = 0;
             btnDanhMuc.FlatAppearance.BorderSize = 0;
             btnLoai.FlatAppearance.BorderSize = 0;
+            btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            btnNhanVien.FlatAppearance.BorderSize = 0;
         }
         private void panelDashboard_Paint(object sender, PaintEventArgs e)
         {
@@ -130,5 +132,23 @@ namespace QLDuocPham_WinForms
             this.Show();
             LoadDashboard();
         }
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTaiKhoan f = new frmTaiKhoan();
+            f.ShowDialog();
+            this.Show();
+            LoadDashboard();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmNhanVien f = new frmNhanVien();
+            f.ShowDialog();
+            this.Show();
+            LoadDashboard();
+        }
+
     }
 }

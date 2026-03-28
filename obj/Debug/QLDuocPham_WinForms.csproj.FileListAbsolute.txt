@@ -38,3 +38,26 @@ D:\DoAn2\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.c
 D:\DoAn2\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.csproj.CoreCompileInputs.cache
 D:\DoAn2\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.exe
 D:\DoAn2\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.pdb
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\bin\Debug\QLDuocPham_WinForms.exe.config
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\bin\Debug\QLDuocPham_WinForms.exe
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\bin\Debug\QLDuocPham_WinForms.pdb
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.csproj.AssemblyReference.cache
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.exe.config
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmDonHang.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmKhachHang.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmLoaiSanPham.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmLogin.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmMain.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmDanhMuc.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmNhaCungCap.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmSanPham.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmThongKeDoanhThu.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmXuatNhapKhoChiNhanh.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.Program.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.Properties.Resources.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.csproj.GenerateResource.cache
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.csproj.CoreCompileInputs.cache
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.exe
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.pdb
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmNhanVien.resources
+D:\Thao Nguyet\QLDuocPham_WinForms\QLDuocPham_WinForms\obj\Debug\QLDuocPham_WinForms.frmTaiKhoan.resources

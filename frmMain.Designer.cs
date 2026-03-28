@@ -24,6 +24,8 @@
             this.btnDonHang = new System.Windows.Forms.Button();
             this.btnXuatNhapKho = new System.Windows.Forms.Button();
             this.btnThongKeDoanhThu = new System.Windows.Forms.Button();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panelDashboard = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
@@ -69,11 +71,13 @@
             this.panelMenu.Controls.Add(this.btnDonHang);
             this.panelMenu.Controls.Add(this.btnXuatNhapKho);
             this.panelMenu.Controls.Add(this.btnThongKeDoanhThu);
+            this.panelMenu.Controls.Add(this.btnTaiKhoan);
+            this.panelMenu.Controls.Add(this.btnNhanVien);
             this.panelMenu.Controls.Add(this.btnThoat);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 511);
+            this.panelMenu.Size = new System.Drawing.Size(220, 560);
             this.panelMenu.TabIndex = 1;
             // 
             // lblSystem
@@ -94,7 +98,7 @@
             this.lblMenuSep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(140)))), ((int)(((byte)(180)))));
             this.lblMenuSep.Location = new System.Drawing.Point(76, 64);
             this.lblMenuSep.Name = "lblMenuSep";
-            this.lblMenuSep.Size = new System.Drawing.Size(64, 17);
+            this.lblMenuSep.Size = new System.Drawing.Size(83, 23);
             this.lblMenuSep.TabIndex = 1;
             this.lblMenuSep.Text = "QUẢN LÝ";
             // 
@@ -234,6 +238,40 @@
             this.btnThongKeDoanhThu.UseVisualStyleBackColor = false;
             this.btnThongKeDoanhThu.Click += new System.EventHandler(this.btnThongKeDoanhThu_Click);
             // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
+            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 405);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(220, 42);
+            this.btnTaiKhoan.TabIndex = 10;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 445);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btnNhanVien.Size = new System.Drawing.Size(220, 42);
+            this.btnNhanVien.TabIndex = 11;
+            this.btnNhanVien.Text = "Nhân viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
@@ -241,7 +279,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnThoat.Location = new System.Drawing.Point(0, 450);
+            this.btnThoat.Location = new System.Drawing.Point(0, 487);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnThoat.Size = new System.Drawing.Size(220, 42);
@@ -265,7 +303,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(220, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(564, 511);
+            this.panelDashboard.Size = new System.Drawing.Size(564, 560);
             this.panelDashboard.TabIndex = 0;
             this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
             // 
@@ -276,7 +314,7 @@
             this.lblDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
             this.lblDashboard.Location = new System.Drawing.Point(212, 19);
             this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(157, 37);
+            this.lblDashboard.Size = new System.Drawing.Size(198, 46);
             this.lblDashboard.TabIndex = 0;
             this.lblDashboard.Text = "Tổng Quan";
             // 
@@ -287,7 +325,7 @@
             this.lblDashSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(130)))), ((int)(((byte)(145)))));
             this.lblDashSub.Location = new System.Drawing.Point(179, 66);
             this.lblDashSub.Name = "lblDashSub";
-            this.lblDashSub.Size = new System.Drawing.Size(222, 15);
+            this.lblDashSub.Size = new System.Drawing.Size(275, 20);
             this.lblDashSub.TabIndex = 1;
             this.lblDashSub.Text = "Tổng quan hệ thống quản lý dược phẩm";
             // 
@@ -473,10 +511,10 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(784, 511);
+            this.ClientSize = new System.Drawing.Size(784, 560);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -532,5 +570,7 @@
         private System.Windows.Forms.Label lblTongDonHang;
         private System.Windows.Forms.Button btnXuatNhapKho;
         private System.Windows.Forms.Button btnThongKeDoanhThu;
+        private System.Windows.Forms.Button btnTaiKhoan;
+        private System.Windows.Forms.Button btnNhanVien;
     }
 }
