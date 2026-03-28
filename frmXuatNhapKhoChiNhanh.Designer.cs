@@ -50,8 +50,8 @@
             this.dgvDanhSachPhieu = new System.Windows.Forms.DataGridView();
             this.pnlChiTietPhieu = new System.Windows.Forms.Panel();
             this.lblChiTietPhieu = new System.Windows.Forms.Label();
-            this.dgvChiTietPhieuDaLuu = new System.Windows.Forms.DataGridView();
             this.btnXuatPdf = new System.Windows.Forms.Button();
+            this.dgvChiTietPhieuDaLuu = new System.Windows.Forms.DataGridView();
             this.pnlTonKho = new System.Windows.Forms.Panel();
             this.lblTonKho = new System.Windows.Forms.Label();
             this.dgvTonKho = new System.Windows.Forms.DataGridView();
@@ -87,7 +87,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(18, 10);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(215, 20);
+            this.lblTitle.Size = new System.Drawing.Size(268, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "🏪  Xuất nhập kho Chi nhánh";
             // 
@@ -98,7 +98,7 @@
             this.lblSubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
             this.lblSubTitle.Location = new System.Drawing.Point(18, 36);
             this.lblSubTitle.Name = "lblSubTitle";
-            this.lblSubTitle.Size = new System.Drawing.Size(299, 15);
+            this.lblSubTitle.Size = new System.Drawing.Size(371, 20);
             this.lblSubTitle.TabIndex = 1;
             this.lblSubTitle.Text = "Lập phiếu xuất nhập kho và theo dõi tồn kho chi nhánh";
             // 
@@ -146,7 +146,7 @@
             this.cbChiNhanh.FormattingEnabled = true;
             this.cbChiNhanh.Location = new System.Drawing.Point(98, 15);
             this.cbChiNhanh.Name = "cbChiNhanh";
-            this.cbChiNhanh.Size = new System.Drawing.Size(220, 25);
+            this.cbChiNhanh.Size = new System.Drawing.Size(220, 29);
             this.cbChiNhanh.TabIndex = 0;
             // 
             // lblLoaiPhieu
@@ -171,7 +171,7 @@
             "Xuất"});
             this.cbLoaiPhieu.Location = new System.Drawing.Point(765, 15);
             this.cbLoaiPhieu.Name = "cbLoaiPhieu";
-            this.cbLoaiPhieu.Size = new System.Drawing.Size(143, 25);
+            this.cbLoaiPhieu.Size = new System.Drawing.Size(143, 29);
             this.cbLoaiPhieu.TabIndex = 1;
             // 
             // lblNgay
@@ -192,7 +192,7 @@
             this.dtNgayGiaoDich.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgayGiaoDich.Location = new System.Drawing.Point(765, 55);
             this.dtNgayGiaoDich.Name = "dtNgayGiaoDich";
-            this.dtNgayGiaoDich.Size = new System.Drawing.Size(143, 24);
+            this.dtNgayGiaoDich.Size = new System.Drawing.Size(143, 29);
             this.dtNgayGiaoDich.TabIndex = 2;
             // 
             // lblNguoiXuat
@@ -213,7 +213,7 @@
             this.txtNguoiXuat.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtNguoiXuat.Location = new System.Drawing.Point(428, 55);
             this.txtNguoiXuat.Name = "txtNguoiXuat";
-            this.txtNguoiXuat.Size = new System.Drawing.Size(219, 24);
+            this.txtNguoiXuat.Size = new System.Drawing.Size(219, 29);
             this.txtNguoiXuat.TabIndex = 3;
             // 
             // lblNguoiNhan
@@ -234,7 +234,7 @@
             this.txtNguoiNhan.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtNguoiNhan.Location = new System.Drawing.Point(98, 95);
             this.txtNguoiNhan.Name = "txtNguoiNhan";
-            this.txtNguoiNhan.Size = new System.Drawing.Size(219, 24);
+            this.txtNguoiNhan.Size = new System.Drawing.Size(219, 29);
             this.txtNguoiNhan.TabIndex = 4;
             // 
             // lblKhoNguon
@@ -255,7 +255,7 @@
             this.txtKhoNguon.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtKhoNguon.Location = new System.Drawing.Point(97, 55);
             this.txtKhoNguon.Name = "txtKhoNguon";
-            this.txtKhoNguon.Size = new System.Drawing.Size(220, 24);
+            this.txtKhoNguon.Size = new System.Drawing.Size(220, 29);
             this.txtKhoNguon.TabIndex = 5;
             // 
             // lblNoiNhan
@@ -276,7 +276,7 @@
             this.txtNoiNhan.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtNoiNhan.Location = new System.Drawing.Point(427, 95);
             this.txtNoiNhan.Name = "txtNoiNhan";
-            this.txtNoiNhan.Size = new System.Drawing.Size(220, 24);
+            this.txtNoiNhan.Size = new System.Drawing.Size(220, 29);
             this.txtNoiNhan.TabIndex = 6;
             // 
             // lblGhiChuPhieu
@@ -297,7 +297,7 @@
             this.txtGhiChuPhieu.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtGhiChuPhieu.Location = new System.Drawing.Point(763, 95);
             this.txtGhiChuPhieu.Name = "txtGhiChuPhieu";
-            this.txtGhiChuPhieu.Size = new System.Drawing.Size(145, 24);
+            this.txtGhiChuPhieu.Size = new System.Drawing.Size(145, 29);
             this.txtGhiChuPhieu.TabIndex = 7;
             // 
             // flpActionsPhieu
@@ -383,7 +383,7 @@
             this.cbSanPham.FormattingEnabled = true;
             this.cbSanPham.Location = new System.Drawing.Point(96, 30);
             this.cbSanPham.Name = "cbSanPham";
-            this.cbSanPham.Size = new System.Drawing.Size(511, 25);
+            this.cbSanPham.Size = new System.Drawing.Size(511, 29);
             this.cbSanPham.TabIndex = 0;
             // 
             // lblSoLuong
@@ -412,7 +412,7 @@
             0,
             0});
             this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(90, 24);
+            this.numSoLuong.Size = new System.Drawing.Size(90, 29);
             this.numSoLuong.TabIndex = 1;
             this.numSoLuong.Value = new decimal(new int[] {
             1,
@@ -470,7 +470,7 @@
             this.txtGhiChuChiTiet.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtGhiChuChiTiet.Location = new System.Drawing.Point(96, 70);
             this.txtGhiChuChiTiet.Name = "txtGhiChuChiTiet";
-            this.txtGhiChuChiTiet.Size = new System.Drawing.Size(511, 24);
+            this.txtGhiChuChiTiet.Size = new System.Drawing.Size(511, 29);
             this.txtGhiChuChiTiet.TabIndex = 2;
             // 
             // dgvChiTietTam
@@ -508,7 +508,7 @@
             this.lblDanhSachPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
             this.lblDanhSachPhieu.Location = new System.Drawing.Point(14, 10);
             this.lblDanhSachPhieu.Name = "lblDanhSachPhieu";
-            this.lblDanhSachPhieu.Size = new System.Drawing.Size(172, 20);
+            this.lblDanhSachPhieu.Size = new System.Drawing.Size(219, 25);
             this.lblDanhSachPhieu.TabIndex = 0;
             this.lblDanhSachPhieu.Text = "Danh sách phiếu đã lưu";
             // 
@@ -549,9 +549,25 @@
             this.lblChiTietPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
             this.lblChiTietPhieu.Location = new System.Drawing.Point(14, 10);
             this.lblChiTietPhieu.Name = "lblChiTietPhieu";
-            this.lblChiTietPhieu.Size = new System.Drawing.Size(179, 20);
+            this.lblChiTietPhieu.Size = new System.Drawing.Size(229, 25);
             this.lblChiTietPhieu.TabIndex = 0;
             this.lblChiTietPhieu.Text = "Chi tiết phiếu đang chọn";
+            // 
+            // btnXuatPdf
+            // 
+            this.btnXuatPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.btnXuatPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXuatPdf.FlatAppearance.BorderSize = 0;
+            this.btnXuatPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatPdf.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnXuatPdf.ForeColor = System.Drawing.Color.White;
+            this.btnXuatPdf.Location = new System.Drawing.Point(927, 3);
+            this.btnXuatPdf.Name = "btnXuatPdf";
+            this.btnXuatPdf.Size = new System.Drawing.Size(137, 40);
+            this.btnXuatPdf.TabIndex = 1;
+            this.btnXuatPdf.Text = "📄 In / Xuất PDF";
+            this.btnXuatPdf.UseVisualStyleBackColor = false;
+            this.btnXuatPdf.Click += new System.EventHandler(this.btnXuatPdf_Click);
             // 
             // dgvChiTietPhieuDaLuu
             // 
@@ -570,22 +586,6 @@
             this.dgvChiTietPhieuDaLuu.Size = new System.Drawing.Size(1037, 122);
             this.dgvChiTietPhieuDaLuu.TabIndex = 0;
             // 
-            // btnXuatPdf
-            // 
-            this.btnXuatPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.btnXuatPdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXuatPdf.FlatAppearance.BorderSize = 0;
-            this.btnXuatPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuatPdf.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnXuatPdf.ForeColor = System.Drawing.Color.White;
-            this.btnXuatPdf.Location = new System.Drawing.Point(927, 3);
-            this.btnXuatPdf.Name = "btnXuatPdf";
-            this.btnXuatPdf.Size = new System.Drawing.Size(137, 40);
-            this.btnXuatPdf.TabIndex = 1;
-            this.btnXuatPdf.Text = "📄 In / Xuất PDF";
-            this.btnXuatPdf.UseVisualStyleBackColor = false;
-            this.btnXuatPdf.Click += new System.EventHandler(this.btnXuatPdf_Click);
-            // 
             // pnlTonKho
             // 
             this.pnlTonKho.BackColor = System.Drawing.Color.White;
@@ -603,7 +603,7 @@
             this.lblTonKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
             this.lblTonKho.Location = new System.Drawing.Point(14, 10);
             this.lblTonKho.Name = "lblTonKho";
-            this.lblTonKho.Size = new System.Drawing.Size(174, 20);
+            this.lblTonKho.Size = new System.Drawing.Size(222, 25);
             this.lblTonKho.TabIndex = 0;
             this.lblTonKho.Text = "Tồn kho theo chi nhánh";
             // 
@@ -626,7 +626,7 @@
             // 
             // frmXuatNhapKhoChiNhanh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
