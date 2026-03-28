@@ -5,8 +5,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLDuocPham_WinForms
@@ -14,6 +12,8 @@ namespace QLDuocPham_WinForms
     public partial class frmTaiKhoan : Form
     {
         private readonly DataGridView dgvTaiKhoan = new DataGridView();
+        private readonly Panel pnlCard = new Panel();
+        private readonly Panel pnlGrid = new Panel();
         private readonly Panel pnlEditor = new Panel();
         private readonly FlowLayoutPanel flpButtons = new FlowLayoutPanel();
         private readonly Button btnThem = new Button();
@@ -35,80 +35,115 @@ namespace QLDuocPham_WinForms
         {
             Text = "Quản lý tài khoản";
             StartPosition = FormStartPosition.CenterScreen;
-            Size = new Size(980, 620);
+            Size = new Size(700, 560);
+            MinimumSize = new Size(700, 560);
             BackColor = Color.FromArgb(245, 247, 250);
 
-            Panel header = new Panel
+            Panel pnlHeader = new Panel
             {
+                BackColor = Color.FromArgb(26, 58, 92),
                 Dock = DockStyle.Top,
-                Height = 64,
-                BackColor = Color.FromArgb(26, 58, 92)
+                Height = 64
             };
-            Label title = new Label
+            Label lblTitle = new Label
             {
                 AutoSize = true,
-                Location = new Point(18, 10),
-                ForeColor = Color.White,
                 Font = new Font("Segoe UI", 11F, FontStyle.Bold),
-                Text = "👤 Quản lý tài khoản"
+                ForeColor = Color.White,
+                Location = new Point(18, 10),
+                Text = "🔐  Quản lý Tài khoản"
             };
-            Label sub = new Label
+            Label lblSubTitle = new Label
             {
                 AutoSize = true,
-                Location = new Point(18, 36),
-                ForeColor = Color.FromArgb(180, 200, 220),
                 Font = new Font("Segoe UI", 8.5F),
-                Text = "Thêm / sửa / xóa tài khoản"
+                ForeColor = Color.FromArgb(180, 200, 220),
+                Location = new Point(18, 36),
+                Text = "Thêm, chỉnh sửa và xoá thông tin tài khoản"
             };
-            header.Controls.Add(title);
-            header.Controls.Add(sub);
-            Controls.Add(header);
+            pnlHeader.Controls.Add(lblTitle);
+            pnlHeader.Controls.Add(lblSubTitle);
+            Controls.Add(pnlHeader);
 
-            dgvTaiKhoan.Dock = DockStyle.Top;
-            dgvTaiKhoan.Height = 320;
-            dgvTaiKhoan.BackgroundColor = Color.White;
-            dgvTaiKhoan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTaiKhoan.AllowUserToAddRows = false;
-            dgvTaiKhoan.RowHeadersVisible = false;
-            dgvTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTaiKhoan.MultiSelect = false;
-            dgvTaiKhoan.CellClick += dgvTaiKhoan_CellClick;
-            Controls.Add(dgvTaiKhoan);
+            pnlCard.BackColor = Color.White;
+            pnlCard.Location = new Point(0, 70);
+            pnlCard.Size = new Size(684, 170);
+            Controls.Add(pnlCard);
 
-            pnlEditor.Dock = DockStyle.Fill;
-            pnlEditor.Padding = new Padding(12);
+            pnlEditor.Location = new Point(10, 10);
+            pnlEditor.Size = new Size(396, 150);
             pnlEditor.BackColor = Color.White;
-            Controls.Add(pnlEditor);
+            pnlCard.Controls.Add(pnlEditor);
 
-            flpButtons.Dock = DockStyle.Bottom;
-            flpButtons.Height = 52;
-            flpButtons.Padding = new Padding(0, 10, 0, 0);
-            pnlEditor.Controls.Add(flpButtons);
+            flpButtons.Location = new Point(420, 20);
+            flpButtons.Size = new Size(222, 87);
+            pnlCard.Controls.Add(flpButtons);
 
             SetupButton(btnThem, "＋ Thêm", Color.FromArgb(39, 174, 96), btnThem_Click);
             SetupButton(btnSua, "✎ Sửa", Color.FromArgb(46, 134, 222), btnSua_Click);
             SetupButton(btnXoa, "✕ Xóa", Color.FromArgb(231, 76, 60), btnXoa_Click);
-            SetupButton(btnLamMoi, "↻ Làm mới", Color.FromArgb(100, 116, 139), btnLamMoi_Click);
+            SetupButton(btnLamMoi, "↺ Làm mới", Color.FromArgb(100, 116, 139), btnLamMoi_Click, true);
             flpButtons.Controls.Add(btnThem);
             flpButtons.Controls.Add(btnSua);
             flpButtons.Controls.Add(btnXoa);
             flpButtons.Controls.Add(btnLamMoi);
 
+            pnlGrid.BackColor = Color.White;
+            pnlGrid.Location = new Point(0, 246);
+            pnlGrid.Size = new Size(684, 265);
+            Controls.Add(pnlGrid);
+
+            Label lblGridTitle = new Label
+            {
+                AutoSize = true,
+                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(26, 58, 92),
+                Location = new Point(12, 9),
+                Text = "Danh sách tài khoản"
+            };
+            pnlGrid.Controls.Add(lblGridTitle);
+
+            dgvTaiKhoan.AllowUserToAddRows = false;
+            dgvTaiKhoan.AllowUserToDeleteRows = false;
+            dgvTaiKhoan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTaiKhoan.BackgroundColor = Color.White;
+            dgvTaiKhoan.BorderStyle = BorderStyle.None;
+            dgvTaiKhoan.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvTaiKhoan.EnableHeadersVisualStyles = false;
+            dgvTaiKhoan.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 58, 92);
+            dgvTaiKhoan.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvTaiKhoan.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            dgvTaiKhoan.DefaultCellStyle.Font = new Font("Segoe UI", 9F);
+            dgvTaiKhoan.DefaultCellStyle.SelectionBackColor = Color.FromArgb(219, 234, 254);
+            dgvTaiKhoan.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvTaiKhoan.GridColor = Color.FromArgb(230, 235, 241);
+            dgvTaiKhoan.Location = new Point(12, 38);
+            dgvTaiKhoan.MultiSelect = false;
+            dgvTaiKhoan.Name = "dgvTaiKhoan";
+            dgvTaiKhoan.ReadOnly = true;
+            dgvTaiKhoan.RowHeadersVisible = false;
+            dgvTaiKhoan.RowTemplate.Height = 28;
+            dgvTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTaiKhoan.Size = new Size(660, 214);
+            dgvTaiKhoan.CellClick += dgvTaiKhoan_CellClick;
+            pnlGrid.Controls.Add(dgvTaiKhoan);
+
             Load += frmTaiKhoan_Load;
         }
 
-        private static void SetupButton(Button btn, string text, Color backColor, EventHandler handler)
+        private static void SetupButton(Button btn, string text, Color backColor, EventHandler handler, bool isLast = false)
         {
-            btn.Text = text;
-            btn.Width = 110;
-            btn.Height = 34;
             btn.BackColor = backColor;
-            btn.ForeColor = Color.White;
-            btn.FlatStyle = FlatStyle.Flat;
+            btn.Cursor = Cursors.Hand;
             btn.FlatAppearance.BorderSize = 0;
+            btn.FlatStyle = FlatStyle.Flat;
             btn.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btn.ForeColor = Color.White;
+            btn.Size = new Size(100, 40);
+            btn.Margin = isLast ? new Padding(0) : new Padding(0, 0, 8, 0);
+            btn.Text = text;
+            btn.UseVisualStyleBackColor = false;
             btn.Click += handler;
-            btn.Margin = new Padding(0, 0, 8, 0);
         }
 
         private void frmTaiKhoan_Load(object sender, EventArgs e)
@@ -139,23 +174,14 @@ namespace QLDuocPham_WinForms
 
         private void BuildEditorFromTable()
         {
-            Label lblGuide = new Label
-            {
-                Text = "Thông tin tài khoản",
-                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
-                ForeColor = Color.FromArgb(26, 58, 92),
-                AutoSize = true,
-                Location = new Point(0, 0)
-            };
-            pnlEditor.Controls.Add(lblGuide);
 
             int x = 0;
-            int y = 32;
-            const int labelWidth = 120;
-            const int inputWidth = 250;
+            int y = 0;
+            const int labelWidth = 110;
+            const int inputWidth = 82;
             const int rowHeight = 34;
-            const int gapX = 24;
-            const int gapY = 10;
+            const int gapX = 10;
+            const int gapY = 6;
             int col = 0;
 
             _orderedColumns.Clear();
@@ -176,16 +202,17 @@ namespace QLDuocPham_WinForms
                 TextBox txt = new TextBox
                 {
                     Name = "txt" + dc.ColumnName,
-                    Size = new Size(inputWidth, 28),
-                    Location = new Point(x + labelWidth + 8, y),
+                    Size = new Size(inputWidth, 24),
+                    Location = new Point(x + labelWidth + 6, y + 2),
                     Font = new Font("Segoe UI", 9.5F),
-                    BorderStyle = BorderStyle.FixedSingle
+                    BorderStyle = BorderStyle.FixedSingle,
+                    BackColor = Color.White
                 };
 
                 if (dc.ColumnName.Equals(_pkColumn, StringComparison.OrdinalIgnoreCase))
                 {
                     txt.ReadOnly = true;
-                    txt.BackColor = Color.FromArgb(245, 247, 250);
+                    txt.BackColor = Color.FromArgb(240, 244, 250);
                 }
 
                 pnlEditor.Controls.Add(lbl);
@@ -330,11 +357,10 @@ namespace QLDuocPham_WinForms
 
         private void ClearInputs()
         {
-            foreach (var ctl in _editControls.Values)
+            foreach (Control ctl in _editControls.Values)
             {
                 ctl.Text = string.Empty;
             }
         }
-        
     }
 }

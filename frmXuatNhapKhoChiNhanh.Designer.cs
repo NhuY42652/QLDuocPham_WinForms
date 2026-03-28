@@ -199,9 +199,9 @@
             // 
             this.lblNguoiXuat.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
             this.lblNguoiXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(115)))), ((int)(((byte)(132)))));
-            this.lblNguoiXuat.Location = new System.Drawing.Point(348, 50);
+            this.lblNguoiXuat.Location = new System.Drawing.Point(340, 50);
             this.lblNguoiXuat.Name = "lblNguoiXuat";
-            this.lblNguoiXuat.Size = new System.Drawing.Size(76, 28);
+            this.lblNguoiXuat.Size = new System.Drawing.Size(82, 28);
             this.lblNguoiXuat.TabIndex = 3;
             this.lblNguoiXuat.Text = "Người giao:";
             this.lblNguoiXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -211,7 +211,7 @@
             this.txtNguoiXuat.BackColor = System.Drawing.Color.White;
             this.txtNguoiXuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNguoiXuat.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtNguoiXuat.Location = new System.Drawing.Point(425, 55);
+            this.txtNguoiXuat.Location = new System.Drawing.Point(428, 55);
             this.txtNguoiXuat.Name = "txtNguoiXuat";
             this.txtNguoiXuat.Size = new System.Drawing.Size(219, 29);
             this.txtNguoiXuat.TabIndex = 3;
@@ -220,9 +220,9 @@
             // 
             this.lblNguoiNhan.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
             this.lblNguoiNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(115)))), ((int)(((byte)(132)))));
-            this.lblNguoiNhan.Location = new System.Drawing.Point(10, 90);
+            this.lblNguoiNhan.Location = new System.Drawing.Point(3, 90);
             this.lblNguoiNhan.Name = "lblNguoiNhan";
-            this.lblNguoiNhan.Size = new System.Drawing.Size(83, 28);
+            this.lblNguoiNhan.Size = new System.Drawing.Size(89, 28);
             this.lblNguoiNhan.TabIndex = 4;
             this.lblNguoiNhan.Text = "Người nhận:";
             this.lblNguoiNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -232,7 +232,7 @@
             this.txtNguoiNhan.BackColor = System.Drawing.Color.White;
             this.txtNguoiNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNguoiNhan.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtNguoiNhan.Location = new System.Drawing.Point(95, 95);
+            this.txtNguoiNhan.Location = new System.Drawing.Point(98, 95);
             this.txtNguoiNhan.Name = "txtNguoiNhan";
             this.txtNguoiNhan.Size = new System.Drawing.Size(219, 29);
             this.txtNguoiNhan.TabIndex = 4;
@@ -565,7 +565,7 @@
             this.btnXuatPdf.Name = "btnXuatPdf";
             this.btnXuatPdf.Size = new System.Drawing.Size(137, 40);
             this.btnXuatPdf.TabIndex = 1;
-            this.btnXuatPdf.Text = "🖨 In phiếu";
+            this.btnXuatPdf.Text = "📄 In / Xuất PDF";
             this.btnXuatPdf.UseVisualStyleBackColor = false;
             this.btnXuatPdf.Click += new System.EventHandler(this.btnXuatPdf_Click);
             // 
